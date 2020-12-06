@@ -1,10 +1,20 @@
+import { Header } from './components'
+import { Products, AddProduct, EditProduct } from './components'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <h1>React products app</h1>
-    </div>
-  );
+    <Router>
+      <Header />
+      <div className='container mt-5'>
+        <Switch>
+          <Route exact path='/' component={ Products } />
+          <Route exact path='/products/add' component={ AddProduct } />
+          <Route exact path='/products/edit/:id' component={ EditProduct } />
+        </Switch>
+      </div>
+    </Router>
+  )
 }
 
 export default App;
