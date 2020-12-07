@@ -1,11 +1,14 @@
 import { 
   ADD_PRODUCT, 
   ADD_PRODUCT_SUCCESS, 
-  ADD_PRODUCT_ERROR 
+  ADD_PRODUCT_ERROR,
+  GET_PRODUCTS,
+  GET_PRODUCTS_SUCCESS,
+  GET_PRODUCTS_ERROR
 } from '../types'
 
 const initialState = {
-  products: [],
+  data: [],
   error: null,
   loading: false  
 }
@@ -22,10 +25,30 @@ export default function( state = initialState, action ) {
       return {
         ...state,
         loading: false,
-        products: [...state.products, action.payload]
+        data: [...state.data, action.payload]
       }
     
     case ADD_PRODUCT_ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload
+      }
+
+    case GET_PRODUCTS:
+      return {
+        ...state,
+        loading: true
+      }
+
+    case GET_PRODUCTS_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: [...action.payload]
+      }
+
+    case GET_PRODUCTS_ERROR:
       return {
         ...state,
         loading: false,

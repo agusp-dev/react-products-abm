@@ -89,6 +89,21 @@
       "name": "Quilmes Origen",
       "price": "411",
       "id": 18
+    },
+    {
+      "name": "Jugo de Tomate",
+      "price": "30",
+      "id": 19
+    },
+    {
+      "name": "Jugo de Duraznos",
+      "price": "35",
+      "id": 20
+    },
+    {
+      "name": "Leche entera 1lts",
+      "price": "90",
+      "id": 21
     }
   ]
 }

@@ -5,11 +5,17 @@ const insertProduct = product => {
   return result
 }
 
-const removeProduct = async product => {
+const removeProduct = product => {
   //todo
+}
+
+const getProducts = () => {
+  const result = axiosClient.get('/products')
+  return result
 }
 
 export {
   insertProduct,
-  removeProduct
+  removeProduct,
+  getProducts
 }
