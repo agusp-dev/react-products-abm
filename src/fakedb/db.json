@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Jugo de Zanahoria",
+      "price": "31111"
+    },
+    {
+      "id": 2,
+      "name": "Jugo de Naranja",
+      "price": "1"
+    },
+    {
+      "name": "Jugo de Naranja",
+      "price": "300",
+      "id": 3
+    },
+    {
+      "name": "Rib Eye 800g",
+      "price": "200",
+      "id": 4
+    },
+    {
+      "name": "Jugo de Fresa",
+      "price": "200",
+      "id": 5
+    },
+    {
+      "name": "afesfaafe",
+      "price": "5653",
+      "id": 6
+    },
+    {
+      "name": "Coca Cola 1.2 lts",
+      "price": "78",
+      "id": 7
+    },
+    {
+      "name": "Pepsi 1lts",
+      "price": "100",
+      "id": 8
+    },
+    {
+      "name": "asdf",
+      "price": "3",
+      "id": 9
+    },
+    {
+      "name": "asdf222",
+      "price": "33",
+      "id": 10
+    },
+    {
+      "name": "asdf222",
+      "price": "33",
+      "id": 11
+    },
+    {
+      "name": "asdf222",
+      "price": "33",
+      "id": 12
+    },
+    {
+      "name": "asdf222",
+      "price": "33",
+      "id": 13
+    },
+    {
+      "name": "fff",
+      "price": "2",
+      "id": 14
+    },
+    {
+      "name": "Pizza",
+      "price": "20",
+      "id": 15
+    },
+    {
+      "name": "Pizza",
+      "price": "20",
+      "id": 16
+    },
+    {
+      "name": "Quilmes Origen",
+      "price": "411",
+      "id": 17
+    },
+    {
+      "name": "Quilmes Origen",
+      "price": "411",
+      "id": 18
+    }
+  ]
+}
