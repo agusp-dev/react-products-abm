@@ -5,6 +5,11 @@ const insertProduct = product => {
   return result
 }
 
+const updateProduct = product => {
+  const result = axiosClient.put(`/products/${product.id}`, product)
+  return result
+}
+
 const removeProduct = id => {
   const result = axiosClient.delete(`/products/${id}`)
   return result
@@ -17,6 +22,7 @@ const getProducts = () => {
 
 export {
   insertProduct,
+  updateProduct,
   removeProduct,
   getProducts
 }

@@ -5,11 +5,14 @@ import {
   GET_PRODUCTS,
   GET_PRODUCTS_SUCCESS,
   GET_PRODUCTS_ERROR,
+  EDIT_PRODUCT,
+  EDIT_PRODUCT_SUCCESS,
+  EDIT_PRODUCT_ERROR,
   DELETE_PRODUCT,
   DELETE_PRODUCT_SUCCESS,
   DELETE_PRODUCT_ERROR
 } from '../types'
-import { insertProduct, getProducts, removeProduct } from '../../api'
+import { insertProduct, getProducts, updateProduct, removeProduct } from '../../api'
 import Swal from 'sweetalert2'
 
 const createNewProduct = ( product, history ) => {
@@ -78,6 +81,37 @@ const getProductsError = error => ({
   payload: error
 })
 
+const editProduct = ( product, history ) => {
+  return async dispatch => {
+    dispatch( editingProduct() )
+    try {
+      const res = await updateProduct(product)
+      if (res.status !== 200 && res.status !== 201) return dispatch( editProductError(res.statusText) )
+      // timeout to test loaging
+      setTimeout(() => {
+        dispatch( editProductSuccess(product) )
+      }, 2000)
+      history.push('/')
+    } catch (e) {
+      dispatch( editProductError(e.message) )
+    }
+  }
+}
+
+const editingProduct = () => ({
+  type: EDIT_PRODUCT
+})
+
+const editProductSuccess = product => ({
+  type: EDIT_PRODUCT_SUCCESS,
+  payload: product
+})
+
+const editProductError = error => ({
+  type: EDIT_PRODUCT_ERROR,
+  payload: error
+})
+
 const deleteProduct = id => {
   return async dispatch => {
     dispatch( removingProduct() )
@@ -108,18 +142,9 @@ const removeProductError = error => ({
   payload: error
 })
 
-
-
-
-
-
-
-
-
-
-
 export {
   createNewProduct,
   getProductList,
-  deleteProduct
+  deleteProduct,
+  editProduct
 }

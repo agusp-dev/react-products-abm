@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import { useDispatch } from 'react-redux'
@@ -10,6 +10,7 @@ import Swal from 'sweetalert2'
 const Product = ({ product }) => {
 
   const dispatch = useDispatch()
+  const history = useHistory()
 
   const { id, name, price } = product
 
@@ -29,16 +30,21 @@ const Product = ({ product }) => {
     })
   }
 
+  const goToSelectedProduct = product => {
+    history.push(`/products/edit/${ product.id }`, { product })
+  }
+
   return (
     <tr>
       <td>{ name }</td>
       <td><span className='font-weight-bold'>$ { price }</span></td>
       <td className='acciones'>
-        <Link 
-          to={`/products/edit/${ id }`} 
-          className='btn btn-primary mr-2'>
+        <button 
+          type='button'
+          className='btn btn-primary mr-2'
+          onClick={ () => goToSelectedProduct(product) }>
           Edit
-        </Link>
+        </button>
         <button
           type='button'
           className='btn btn-danger'
