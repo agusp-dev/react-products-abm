@@ -5,8 +5,9 @@ const insertProduct = product => {
   return result
 }
 
-const removeProduct = product => {
-  //todo
+const removeProduct = id => {
+  const result = axiosClient.delete(`/products/${id}`)
+  return result
 }
 
 const getProducts = () => {
