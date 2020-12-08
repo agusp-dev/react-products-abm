@@ -49,7 +49,7 @@ const EditProduct = () => {
                   name='name'
                   className='form-control'
                   placeholder='Enter the product name'
-                  defaultValue={ product.name }
+                  value={ name }
                   onChange={ onHandleChange }/>
               </div>
               <div className='form-group'>
@@ -59,7 +59,7 @@ const EditProduct = () => {
                   name='price'
                   className='form-control'
                   placeholder='Enter the product price'
-                  defaultValue={ product.price }
+                  value={ price }
                   onChange={ onHandleChange }/>
               </div>
               <button 

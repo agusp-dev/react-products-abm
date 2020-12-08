@@ -17,12 +17,12 @@
     },
     {
       "name": "Pizza",
-      "price": "20",
+      "price": "205",
       "id": 16
     },
     {
       "name": "Quilmes Origen",
-      "price": "411",
+      "price": "112",
       "id": 17
     },
     {
@@ -31,13 +31,13 @@
       "id": 18
     },
     {
-      "name": "Jugo de Tomate",
-      "price": "30",
+      "name": "Jugo de Tomates",
+      "price": "36",
       "id": 19
     },
     {
       "name": "Jugo de Duraznos",
-      "price": "35",
+      "price": "156",
       "id": 20
     },
     {

@@ -30,7 +30,7 @@ const createNewProduct = ( product, history ) => {
           'success'
         )
         history.push('/')
-      }, 2000)
+      }, 1000)
     } catch(e) {
       dispatch( addProductError(e.message) )
     }
@@ -60,7 +60,7 @@ const getProductList = () => {
       // timeout to test loaging
       setTimeout(() => {
         dispatch( getProductsSuccess(res.data) )
-      }, 2000)
+      }, 1000)
     } catch (e) {
       dispatch( getProductsError(e.message) )
     }
@@ -90,7 +90,12 @@ const editProduct = ( product, history ) => {
       // timeout to test loaging
       setTimeout(() => {
         dispatch( editProductSuccess(product) )
-      }, 2000)
+        Swal.fire(
+          'Good Job!',
+          'Product updated Succesful',
+          'success'
+        )
+      }, 1000)
       history.push('/')
     } catch (e) {
       dispatch( editProductError(e.message) )
@@ -121,7 +126,7 @@ const deleteProduct = id => {
       // timeout to test loaging
       setTimeout(() => {
         dispatch( removeProductSuccess(id) )
-      }, 2000)
+      }, 1000)
     } catch (e) {
       dispatch( removeProductError(e.message) )
     }
